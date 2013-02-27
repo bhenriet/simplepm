@@ -1,0 +1,130 @@
+Task attributes
+---------------
+() Id
+(TEXT) Title
+(ENUM) Type
+() Description
+() Author
+(ENUM) Status
+() Progress
+() Assigned
+() Priority
+() Duration
+() From
+() To
+() Tags
+() Depends
+() Parent
+
+Filter possibilities
+--------------------
+~ Id: IN
+O Title: LIKE
+O Type: IN
+O Description: LIKE
+O Author: IN
+O Status: IN
+O Progress: > < =
+O Assigned: IN
+O Priority: > < = 
+O Duration: > < =
+O From: > < =
+O To: > < =
+O Tags: IN
+O Depends: IN
+O Parent: IN
+
+
+File Format
+-----------
+
+AddList:Tasks Of Benjamin
+
+[List:Tasks Of Benjamin]
+
+Columns=Id,Status,Duration,Title
+Filter=Id:(5,6,7),Status(TODO,DONE),Assigned(Benjamin),Duration(>5,<10),Title(%Analyse%)
+Sorted by=FromDate asc
+Group by=Type
+
+
+
+|Id     |Status |Duration|Title			               
+|1      |DONE   |10      |Documenter le projet pour faciliter les transferts de connaissance                
+|1.1    |DONE   |8       |Completer le wiki                                                                              
+|1.2    |DONE   |5       |Documenter le code source                                                         
+|1.4    |TODO   |1       |Configuration du système
+
+
+
+
+------------------------------
+
+
+
+[List: Liste des tâches]
+Columns:Id,Duration,Status,Assignation,Title
+SubForm:Description,Progress,Depends
+Aggregate:Duration,Progress
+Filter:Type(Fonctionnality)	
+Order:Status ASC CUT,Id ASC
+
+Status: -
+
+1.0   3.0 - DSC Générer le carnet de tournée
+	* Description: Produire le carnet de tournée qui sera utilisé par les indexier.
+	Utiliser Webkit
+	Générer le carnet depuis le Tour
+	* Progress: 50
+1.1   1.0 - DSC Index incorrect dans le carnet: message alerte pour indexier
+	* Description: Produire le carnet de tournée qui sera utilisé par les indexier.
+	Utiliser Webkit
+	Générer le carnet depuis le Tour
+	* Progress: 0
+1.3   3.0 / DSC Créer un carnet de tournées non périodique
+	* Description: Produire le carnet de tournée qui sera utilisé par les indexier.
+	Utiliser Webkit
+	Générer le carnet depuis le Tour
+	* Progress: 0
+1.4   2.0 - DSC Générer une lettre de rappel
+	* Description: Produire le carnet de tournée qui sera utilisé par les indexier.
+	Utiliser Webkit
+	Générer le carnet depuis le Tour
+	* Progress: 0
+1.5   2.0 - DSC Générer les cartes blanches
+	* Description: Produire le carnet de tournée qui sera utilisé par les indexier.
+	Utiliser Webkit
+	Générer le carnet depuis le Tour
+	* Progress: 0
+1.6   2.0 - BHE Consulter les consommations discrétisées
+	* Description: Produire le carnet de tournée qui sera utilisé par les indexier.
+	Utiliser Webkit
+	Générer le carnet depuis le Tour
+	* Progress: 0
+1.10  2.0 - BHE Produire le rapport IEAV/IEMV moyen par GRD et SLP
+	* Description: Produire le carnet de tournée qui sera utilisé par les indexier.
+	Utiliser Webkit
+	Générer le carnet depuis le Tour
+	* Progress: 0
+
+Status: O
+
+1.2   5.0 O DSC Générer les cartes roses
+	* Description: Produire le carnet de tournée qui sera utilisé par les indexier.
+	Utiliser Webkit
+	Générer le carnet depuis le Tour
+	* Progress: 100
+
+Duration: 17 jours
+Progress: 60
+
+[Json Task BackLog]
+
+...
+...
+...
+
+[Json Config BackLog]
+
+...
+...

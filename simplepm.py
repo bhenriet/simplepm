@@ -4,8 +4,10 @@ import sys, getopt
 import os
 
 def parse(filePath):
+   lines = []
    file = open(filePath, 'r')
    for line in file:
+      lines.append(line)
       print line
    file.close()   
 
